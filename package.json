@@ -1,0 +1,25 @@
+{
+  "name": "proxy-for-remo-local-api",
+  "version": "1.0.0",
+  "description": "Proxy for Remo local API",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/restus-inc/proxy-for-remo-local-api.git"
+  },
+  "author": "Yuo Mamoru <m.yuo@restus.co.jp> (https://restus.co.jp)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/restus-inc/proxy-for-remo-local-api/issues"
+  },
+  "homepage": "https://github.com/restus-inc/proxy-for-remo-local-api#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

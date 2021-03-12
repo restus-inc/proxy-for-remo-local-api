@@ -1,0 +1,7 @@
+{
+  "httpServer": {
+    "port": 9000,
+    "accessControlAllowOrigin": "*"
+  },
+  "remoLocalApiOrigin": "Origin of Remo Local API"
+}
