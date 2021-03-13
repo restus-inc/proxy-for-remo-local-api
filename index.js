@@ -2,13 +2,15 @@ const http = require('http');
 const httpProxy = require('http-proxy');
 const config = require('config');
 
+const PASS_THROUGH_HEADERS = ['accept', 'x-requested-with', 'content-type', 'content-length']
+
 const proxy = httpProxy.createProxyServer({});
 proxy.on('proxyReq', (proxyReq) => {
   proxyReq.getHeaderNames().forEach((headerName) => {
-    proxyReq.removeHeader(headerName);
-  })
-  proxyReq.setHeader('accept', 'application/json');
-  proxyReq.setHeader('X-Requested-With', 'local');
+    if (!PASS_THROUGH_HEADERS.includes(headerName)) {
+      proxyReq.removeHeader(headerName);
+    }
+  });
 });
 proxy.on('proxyRes', (_proxyRes, _req, res) => {
   res.setHeader('access-control-allow-origin', config.get('httpServer.accessControlAllowOrigin'));

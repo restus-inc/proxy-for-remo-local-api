@@ -1,6 +1,6 @@
 {
   "name": "proxy-for-remo-local-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Proxy for Remo local API",
   "scripts": {
     "start": "nodemon index.js"
